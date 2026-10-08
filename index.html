@@ -123,16 +123,24 @@
         .home-welcome a {
             display: inline-block;
             padding: 12px 28px;
-            border: 1px solid #493b30;
+            border: 1px solid #b08a57;
             background-color: #302720;
             color: #eee4d8;
             font-size: 14px;
             text-decoration: none;
             transition: transform 0.3s ease;
+            animation: button-zoom 1.5s ease-in-out 3s infinite;
         }
 
-        .home-welcome a:hover {
-            transform: scale(1.05);
+        @keyframes button-zoom {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.06);
+            }
         }
 
         @media screen and (max-width: 768px) {
