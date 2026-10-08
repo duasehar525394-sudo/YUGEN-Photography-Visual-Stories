@@ -56,6 +56,16 @@
         nav a {
             color: #fff;
             text-decoration: none;
+            display: inline-block;
+            padding: 5px 8px;
+            border: 1px solid transparent;
+            transition: color 0.3s ease, transform 0.3s ease, border-bottom-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d9bd9e;
+            transform: translateY(-4px);
+            border-bottom-color: #b08a57;
         }
 
         #home {
@@ -72,6 +82,7 @@
             height: 480px;
             object-fit: cover;
             filter: brightness(55%);
+            animation: fade-in 0.8s ease-out both;
         }
 
         .welcome-text {
@@ -80,6 +91,29 @@
             left: 5%;
             color: #fff;
             transform: translateY(-50%);
+            animation: slide-in 0.8s ease-out both;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                translate: 30px 0;
+            }
+
+            to {
+                opacity: 1;
+                translate: 0 0;
+            }
         }
 
         .welcome-text p {
@@ -99,6 +133,7 @@
             padding: 60px 5%;
             background-color: #1a1715;
             text-align: center;
+            animation: fade-in 0.8s ease-out both;
         }
 
         .home-welcome h2 {
@@ -125,11 +160,14 @@
             color: #eee4d8;
             font-size: 14px;
             text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
         }
 
-        .view-portfolio-btn {
-            transform: translateY(0);
-}
+        .home-welcome a:hover {
+            transform: translateY(-4px);
+            border-color: #b08a57;
+            background-color: #3b3028;
+        }
 
         @media screen and (max-width: 768px) {
             #header {
