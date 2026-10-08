@@ -51,6 +51,16 @@
         nav a {
             color: white;
             text-decoration: none;
+            display: inline-block;
+            padding: 5px 8px;
+            border: 1px solid transparent;
+            transition: color 0.3s ease, transform 0.3s ease, border-bottom-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d9bd9e;
+            transform: translateY(-4px);
+            border-bottom-color: #b08a57;
         }
 
         main {
@@ -63,6 +73,19 @@
             gap: 12px;
             padding: 42px 5% 55px;
             background-color: #171513;
+            animation: slide-in 0.8s ease-out both;
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .services-title {
@@ -78,6 +101,11 @@
 
         .project {
             background-color: #25201c;
+            transition: transform 0.4s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
         }
 
         .project img {

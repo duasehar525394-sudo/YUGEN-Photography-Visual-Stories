@@ -56,6 +56,16 @@
         nav a {
             color: #fff;
             text-decoration: none;
+            display: inline-block;
+            padding: 5px 8px;
+            border: 1px solid transparent;
+            transition: color 0.3s ease, transform 0.3s ease, border-bottom-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d9bd9e;
+            transform: translateY(-4px);
+            border-bottom-color: #b08a57;
         }
         
         .contact {
@@ -95,6 +105,15 @@
             display: flex;
             flex-direction: column;
             gap: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-details li:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-details li:hover .contact-label {
+            color: #b08a57;
         }
 
         .contact-label {
@@ -112,6 +131,19 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+            animation: slide-in 0.8s ease-out both;
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .form-group {
@@ -140,11 +172,17 @@
         .submit-btn {
             background-color: #eee8df;
             color: #151311;
-            border: none;
+            border: 3px solid #b08a57;
             padding: 12px 20px;
             font-weight: bold;
             cursor: pointer;
             align-self: flex-start;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-4px);
+            background-color: #d9bd9e;
         }
 
         .form-group label {
