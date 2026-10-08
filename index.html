@@ -7,6 +7,9 @@
     <style>
         body {
             margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            border: 2px solid #b08a57;
             background-color: #151311;
             color: #eee8df;
             font-family: Arial, sans-serif;
@@ -125,11 +128,12 @@
             color: #eee4d8;
             font-size: 14px;
             text-decoration: none;
+            transition: transform 0.3s ease;
         }
 
-        .view-portfolio-btn {
-            transform: translateY(0);
-}
+        .home-welcome a:hover {
+            transform: scale(1.05);
+        }
 
         @media screen and (max-width: 768px) {
             #header {
