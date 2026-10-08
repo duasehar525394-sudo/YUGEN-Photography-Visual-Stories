@@ -69,7 +69,7 @@
         .about h1 {
             margin: 0 0 12px;
             padding: 0 0 18px;
-            border-bottom: 1px solid #493b30;
+            border-bottom: 1px solid #b08a57;
             color: #eee4d8;
             font-family: Georgia, serif;
             font-weight: normal;
@@ -82,10 +82,12 @@
         }
 
         .about img {
+            box-sizing: border-box;
             width: 100%;
             height: 360px;
             object-fit: cover;
-            transform: translateY(-20px);
+            border: 1px solid #b08a57;
+            transition: transform 0.3s ease;
         }
 
         .about-images {
@@ -98,6 +100,10 @@
         .about-images .about-detail {
             height: 250px;
             object-position: left;
+        }
+
+        .about-images img:hover {
+            transform: scale(1.03);
         }
 
         .about-approach {
@@ -150,6 +156,11 @@
 
     .about-images {
         grid-template-columns: 1fr;
+    }
+
+    .about-images img,
+    .about-images .about-detail {
+        height: 280px;
     }
 
     .about-approach {
