@@ -51,18 +51,34 @@
         }
 
         nav a {
+            position: relative;
             color: white;
             text-decoration: none;
             display: inline-block;
             padding: 5px 8px;
-            border: 1px solid transparent;
-            transition: color 0.3s ease, transform 0.3s ease, border-bottom-color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a::after {
+            position: absolute;
+            right: 8px;
+            bottom: 0;
+            left: 8px;
+            height: 1px;
+            background-color: #b08a57;
+            content: "";
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
         }
 
         nav a:hover {
             color: #d9bd9e;
             transform: translateY(-4px);
-            border-bottom-color: #b08a57;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
         }
 
         main {
