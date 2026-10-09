@@ -208,8 +208,9 @@
             }
 
             .about {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
                 padding: 30px 5% 40px;
+                gap: 20px;
             }
 
             .about h1 {
@@ -217,19 +218,38 @@
             }
 
             .about-images {
-                grid-template-columns: 1fr 180px;
+                grid-template-columns: 1fr 150px;
                 align-items: end;
-                gap: 12px;
+                gap: 10px;
             }
 
-            .about-images img,
+            .about-images img {
+                height: 280px;
+            }
+
             .about-images .about-detail {
-                height: 250px;
+                height: 200px;
             }
 
             .about-approach {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 18px;
+                gap: 15px;
+                margin-top: 15px;
+                padding-top: 15px;
+            }
+
+            .about-approach-title {
+                margin: 15px 0 8px;
+                font-size: 16px;
+            }
+
+            .about-approach h3 {
+                font-size: 14px;
+            }
+
+            .about-approach p {
+                font-size: 12px;
+                line-height: 1.4;
             }
         }
     </style>
