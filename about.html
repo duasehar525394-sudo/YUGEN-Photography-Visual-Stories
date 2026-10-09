@@ -208,7 +208,7 @@
             }
 
             .about {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 padding: 30px 5% 40px;
             }
 
@@ -217,9 +217,9 @@
             }
 
             .about-images {
-                grid-template-columns: 1fr;
-                align-items: start;
-                gap: 20px;
+                grid-template-columns: 1fr 180px;
+                align-items: end;
+                gap: 12px;
             }
 
             .about-images img,
@@ -228,8 +228,8 @@
             }
 
             .about-approach {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
             }
         }
     </style>
