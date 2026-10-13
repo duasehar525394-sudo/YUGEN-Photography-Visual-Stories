@@ -52,34 +52,18 @@
         }
 
         nav a {
-            position: relative;
             color: white;
             text-decoration: none;
             display: inline-block;
             padding: 5px 8px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        nav a::after {
-            position: absolute;
-            right: 8px;
-            bottom: 0;
-            left: 8px;
-            height: 1px;
-            background-color: #b08a57;
-            content: "";
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
+            border-bottom: 1px solid transparent;
+            transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
         }
 
         nav a:hover {
             color: #d9bd9e;
             transform: translateY(-4px);
-        }
-
-        nav a:hover::after {
-            transform: scaleX(1);
+            border-bottom-color: #b08a57;
         }
 
         main {
@@ -90,7 +74,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 12px;
-            padding: 42px 5% 55px;
+            padding: 24px 5% 55px;
             background-color: #171513;
             animation: slide-in 0.8s ease-out both;
         }
@@ -108,10 +92,10 @@
         }
 
         .services-title {
-            grid-column: 1 / -1;
-            margin: 0 0 12px;
-            padding: 0 0 18px;
+            margin: 0;
+            padding: 42px 5% 18px;
             border-bottom: 1px solid #b08a57;
+            background-color: #171513;
             color: #eee4d8;
             font-family: Georgia, serif;
             font-weight: normal;
@@ -195,8 +179,8 @@
     </header>
 
     <main>
+        <h1 class="services-title">Our Services & Portfolio</h1>
         <section class="project-grid">
-            <h1 class="services-title">Our Services & Portfolio</h1>
             <div class="project">
                 <img src="Portrait Photography.jpg" alt="Black-and-white portrait in soft studio light">
                 <div class="project-label">
